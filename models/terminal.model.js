@@ -4,7 +4,7 @@ const Terminal = mongoose.model(
     "Terminal",
     new mongoose.Schema({
         name: String,
-        flights: [],
+        flights: [{type: mongoose.Schema.ObjectId, ref: "Flight"}],
         Capacity: Number
     })
 )
